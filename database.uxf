@@ -12,7 +12,7 @@ armee_id
 regiment_id
 actif
 date_crea
-creator_id</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>868</x><y>160</y><w>100</w><h>30</h></coordinates><panel_attributes>SimpleClass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>458</x><y>150</y><w>120</w><h>80</h></coordinates><panel_attributes>roles
+creator_id</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>458</x><y>150</y><w>120</w><h>80</h></coordinates><panel_attributes>roles
 --
 id
 libelle

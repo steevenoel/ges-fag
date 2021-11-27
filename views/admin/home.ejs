@@ -20,14 +20,70 @@
 					<h1 class="h3 mb-3"><%= titre %></h1>
 
 					<div class="row">
-						<div class="col-12">
+						<!-- nombre de demande materiel --->
+						<div class="col-6">
 							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
-								</div>
 								<div class="card-body">
+									<div class="row">
+										<div class="col mt-0">
+											<h5 class="card-title">Nombre de demande de matériel</h5>
+										</div>
+										<div class="col-auto">
+											<div class="stat text-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck align-middle"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+											</div>
+										</div>
+									</div>
+									<h1 class="mt-1 mb-3">2.382</h1>
 								</div>
 							</div>
+						</div>
+						<!-- nombre d'etat major --->
+						<div class="col-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col mt-0">
+											<h5 class="card-title">Nombre d'état major</h5>
+										</div>
+										<div class="col-auto">
+											<div class="stat text-primary">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck align-middle"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+											</div>
+										</div>
+									</div>
+									<h1 class="mt-1 mb-3">2.382</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h1 class="h3 mb-3">Demande de materiel non traité</h1>
+
+					<div class="col-12">
+						<div class="card flex-fill p-4">
+							<table id="datatables-reponsive" class="table table-striped" style="width:100%">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Position</th>
+										<th>Office</th>
+										<th>Age</th>
+										<th>Start date</th>
+										<th>Salary</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Tiger Nixon</td>
+										<td>System Architect</td>
+										<td>Edinburgh</td>
+										<td>61</td>
+										<td>2011/04/25</td>
+										<td>$320,800</td>
+									</tr>
+									</tbody>
+							</table>
 						</div>
 					</div>
 
@@ -49,6 +105,8 @@
 	</div>
 
     <%- include('partials/footer'); %>
+	<script  src="/javascripts/datatables.js"></script>
+	<script  src="/javascripts/fag/home.js"></script>
 
 </body>
 
