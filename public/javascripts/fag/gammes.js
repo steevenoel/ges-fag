@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#datatables-reponsive").DataTable({
         responsive: true,
         "searching": false,
-        "order": [[1, "asc"]],
+        "order": [[1, "desc"]],
         "language": {
             "sEmptyTable": "Aucune donnée disponible dans le tableau",
             "sInfo": "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let formulaire = document.querySelector('#createprovince');
+let formulaire = document.querySelector('#createpgamme');
 
 formulaire.addEventListener("submit", (e) => {
 
@@ -63,7 +63,7 @@ formulaire.addEventListener("submit", (e) => {
         }).then(
             () => { },
 
-            fetch('/fag/provinces', {
+            fetch('/fag/gammes', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {
@@ -94,7 +94,6 @@ formulaire.addEventListener("submit", (e) => {
 });
 
 
-
 /** Fonction de suppression d'une province */
 let supprimer = document.querySelectorAll(".supprimer");
 
@@ -105,7 +104,7 @@ supprimer.forEach((el) => {
         let libelle = el.dataset.libelle;
 
         Swal.fire({
-            title: 'Êtes vous sur de supprimer cette province ' + libelle + ' ?',
+            title: 'Êtes vous sur de supprimer cette gamme ' + libelle + ' ?',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#1cbb8c',
@@ -126,7 +125,7 @@ supprimer.forEach((el) => {
                 }).then(
                     () => { },
 
-                    fetch('/fag/supprimer-province', {
+                    fetch('/fag/supprimer-gamme', {
                         method: 'POST',
                         body: JSON.stringify(formData),
                         headers: {
@@ -166,8 +165,8 @@ modifier.forEach((el) => {
 });
 
 
-/** Fonction de modification d'une province */
-let formulaireM = document.querySelector("#updateprovince");
+/** Fonction de modification d'une gamme */
+let formulaireM = document.querySelector("#updategamme");
 
 formulaireM.addEventListener("submit", (e) => {
 
@@ -194,7 +193,7 @@ formulaireM.addEventListener("submit", (e) => {
         }).then(
             () => { },
 
-            fetch('/fag/update-province', {
+            fetch('/fag/update-gamme', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {
