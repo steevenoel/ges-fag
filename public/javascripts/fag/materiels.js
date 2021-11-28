@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
-
     
 
     let gammesNode = document.querySelector('#gammes');
