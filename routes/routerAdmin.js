@@ -16,5 +16,9 @@ router.get('/gammes', controller.gamme);
 router.post('/gammes', controller.creategamme);
 router.post('/supprimer-gamme', controller.deletegamme);
 router.post('/update-gamme', controller.updategamme);
+router.get('/liste-gamme', controller.listegamme);
+
+/** Routes pour le materiel */
+router.get('/materiels', controller.materiels);
 
 module.exports = router;

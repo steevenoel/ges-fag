@@ -112,6 +112,13 @@ exports.gamme = (req, res) => {
     });
 }
 
+/** Liste des gammes */
+exports.listegamme = (req, res )=>{
+  db.query("SELECT * FROM gammes ", (error, result) => {
+      res.json({  data: result });
+  });
+}
+
 /** Fonction d'ajout d'une gamme */
 exports.creategamme = (req, res )=>{
 
@@ -201,3 +208,11 @@ exports.updategamme= (req, res )=>{
     }
   
   }
+
+/**  Page de gestion du materiel */
+exports.materiels = (req, res) => {
+    db.query("SELECT materiels.id AS id , materiels.libelle AS libelle , materiels.gamme_id AS gammeid , materiels.date_crea AS date_crea , gammes.libelle AS gamme FROM materiels INNER JOIN gammes ON materiels.gamme_id = gammes.id", (error, result) => {
+        console.log(result);
+        res.render('admin/materiels', { titre: "Liste de type de matériel", data: result })
+    });
+}
