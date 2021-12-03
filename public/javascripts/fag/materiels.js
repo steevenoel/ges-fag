@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Choices.js
-    new Choices(document.querySelector(".choices-single"));
+
 
      // Datatables Responsive
      $("#datatables-reponsive").DataTable({
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
 
-    let gammesNode = document.querySelector('#gammes');
+    let gammesNode = document.querySelector('#datalistOptions');
 
     // recuperation des games 
     fetch('/fag/liste-gamme').then(res => res.json()).then((res)=>{
@@ -48,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let operateurs = res.data;
         operateurs.forEach((op)=>{
             let option = document.createElement('option');
-            option.value = op.id ;
+            //option.value = op.id ;
+            option.dataset.value =  op.id ;
             option.innerText = op.libelle ;
             gammesNode.appendChild(option);
         });
