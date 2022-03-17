@@ -16,5 +16,20 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.1"
-  }
+  },
+  "description": "gestion de stock fag",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steevenoel/ges-fag.git"
+  },
+  "keywords": [
+    "nonoperso@93"
+  ],
+  "author": "noel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steevenoel/ges-fag/issues"
+  },
+  "homepage": "https://github.com/steevenoel/ges-fag#readme"
 }
