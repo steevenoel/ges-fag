@@ -1,0 +1,11 @@
+{
+    "configurations": [
+
+        {
+            "type": "pwa-chrome",
+            "name": "https://github.com/hamiltondarryl/ges-fag.git",
+            "request": "launch",
+            "url": "https://github.com/hamiltondarryl/ges-fag.git"
+        }
+    ]
+}
