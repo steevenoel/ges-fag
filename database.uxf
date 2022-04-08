@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>178</x><y>149</y><w>140</w><h>240</h></coordinates><panel_attributes>Users
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>16</x><y>149</y><w>140</w><h>240</h></coordinates><panel_attributes>Users
 --
 id
 login
@@ -12,27 +12,27 @@ armee_id
 regiment_id
 actif
 date_crea
-creator_id</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>458</x><y>150</y><w>120</w><h>80</h></coordinates><panel_attributes>roles
+creator_id</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>296</x><y>150</y><w>120</w><h>80</h></coordinates><panel_attributes>roles
 --
 id
 libelle
 accro
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>678</x><y>200</y><w>100</w><h>80</h></coordinates><panel_attributes>Armees
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>516</x><y>200</y><w>100</w><h>80</h></coordinates><panel_attributes>Armees
 --
 id
 libelle
-accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>468</x><y>320</y><w>100</w><h>90</h></coordinates><panel_attributes>Regiments
+accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>320</y><w>100</w><h>90</h></coordinates><panel_attributes>Regiments
 --
 id
 libelle
 accro
-province_id</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>50</y><w>340</w><h>30</h></coordinates><panel_attributes>Superadmin // DGL // Etatmajor // gestionnaire
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>698</x><y>360</y><w>100</w><h>80</h></coordinates><panel_attributes>Provinces
+province_id</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>186</x><y>50</y><w>340</w><h>30</h></coordinates><panel_attributes>Superadmin // DGL // Etatmajor // gestionnaire
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>536</x><y>360</y><w>100</w><h>80</h></coordinates><panel_attributes>Provinces
 --
 id
 libelle
-accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>520</y><w>130</w><h>160</h></coordinates><panel_attributes>materiels
+accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>520</y><w>130</w><h>160</h></coordinates><panel_attributes>materiels
 --
 id
 typemateriel_id
@@ -42,20 +42,20 @@ statut
 regiment_id
 date_crea
 creator_id
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>460</y><w>100</w><h>80</h></coordinates><panel_attributes>typemateriels
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>248</x><y>460</y><w>100</w><h>80</h></coordinates><panel_attributes>typemateriels
 --
 id
 libelle
-accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>410</y><w>100</w><h>90</h></coordinates><panel_attributes>villes
+accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>38</x><y>410</y><w>100</w><h>90</h></coordinates><panel_attributes>villes
 --
 id
 libelle
-accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>560</y><w>100</w><h>130</h></coordinates><panel_attributes>affectation
+accro</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>560</y><w>100</w><h>130</h></coordinates><panel_attributes>affectation
 --
 id
 etatmajord_id
 regiment_id
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>570</y><w>100</w><h>120</h></coordinates><panel_attributes>demandemaretiel
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>488</x><y>570</y><w>100</w><h>120</h></coordinates><panel_attributes>demandemaretiel
 --
 id
 typemariels_id

@@ -21,4 +21,25 @@ router.get('/liste-gamme', controller.listegamme);
 /** Routes pour le materiel */
 router.get('/materiels', controller.materiels);
 
-module.exports = router;
+/**Routes pour les villes  */
+
+/*Routes pour les utilisateurs */
+
+/*Routes pour les  Roles*/
+
+/*Routes pour les  Armees*/
+
+/*Routes typemateriels*/
+
+/*Routes pour affectation*/
+
+/*Routes pour  les demandesMateriel*/
+
+/*Routes pour les affectations*/
+
+/*Routes Pour  les Regiments*/
+
+
+
+module.exports = router
+
