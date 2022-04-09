@@ -579,8 +579,7 @@ exports.createtypemate = (req, res) => {
 }
 
 /** fonction de modification  des types de materiel  */
-
-exports.updateTypemate = (req, res) => {
+exports.updatetypemate = (req, res) => {
   let { id, libelle, acro } = req.body;
   if (id && libelle && acro) {
     db.query('SELECT * FROM type_materiel WHERE libelle = ? ', [libelle], (error, result) => {
@@ -605,7 +604,110 @@ exports.updateTypemate = (req, res) => {
   }
 }
 
+/*fonction de suppression des types de materiel  */
+exports.deletetypemate = (req, res) => {
+  let { id } = req.body;
+  if (id) {
+    db.query('DELETE FROM type_materiel WHERE id = ?', [id], (error, result) => {
+      if (error) {
+        console.log(error);
+      }
+      if (result.affectedRows > 0) {
+        res.json({ "response": true, titre: "Type de matériel supprimé", message: "Suppression éfféctuée avec succès!" })
+      } else {
+        res.json({ "response": false, titre: "Type de matériel non supprimé", message: "Désolé ce type de matériel n'existe pas" })
+      }
+    })
+  } else {
+    res.json({ "response": false, titre: "Champ(s) vide(s)", message: "Veuillez remplire tous les champs!" })
+  }
+}
+
+/** page Gestin Armee  */
+
+exports.armee = (req, res) => {
+  db.query('SELECT * FROM armee ', (error, result) => {
+    console.log(result);
+    res.render('admin/armee', { titre: "Armee", data: result })
+  });
+}
+
+/** Page Gestion des Regimemts  */
+exports.regiments = (req, res) => {
+  db.query('SELECT * FROM regiments ', (error, result) => {
+    console.log(result);
+    res.render('admin/regiments', { titre: "Regiments", data: result })
+  });
+}
+
+/** Fonction d'ajout d'un regiment */
+exports.createregiments = (req, res) => {
+  let { libelle } = req.body;
+  if (libelle) {
+    db.query('SELECT * FROM regiments WHERE libelle = ? ', [libelle], (error, result) => {
+      if (error) {
+        console.log(error);
+      }
+      if (result.length > 0) {
+        res.json({ "response": false, titre: "Regiment existant", message: "Désolé ce regiment existe déja" })
+      } else {
+        db.query('INSERT INTO regiments SET ?', { libelle: libelle }, (error2, result2) => {
+          if (error2) {
+            res.json({ "response": false, titre: "Erreur", message: "Erreur de donné" })
+          } else {
+            console.log(result2)
+            res.json({ "response": true, titre: "Regiment ajouté", message: "Enregistrement éfféctuée avec succès!" })
+          }
+        })
+      }
+    })
+  } else {
+    res.json({ "response": false, titre: "Champ(s) vide(s)", message: "Veuillez remplire tous les champs!" })
+  }
+}
+
+/** Fonction de modification d'un regiment */
+exports.updateregiments = (req, res) => {
+  let { id, libelle } = req.body;
+  if (id && libelle) {
+    db.query('SELECT * FROM regiments WHERE libelle = ? ', [libelle], (error, result) => {
+      if (error) {
+        console.log(error);
+      }
+      if (result.length > 0) {
+        res.json({ "response": false, titre: "Regiment existant", message: "Désolé ce regiment existe déja" })
+      } else {
+        db.query('UPDATE regiments SET libelle = ? WHERE id = ?', [libelle, id], (error2, result2) => {
+          if (error2) {
+            res.json({ "response": false, titre: "Erreur", message: "Erreur de donné" })
+          } else {
+            console.log(result2)
+            res.json({ "response": true, titre: "Regiment modifié", message: "Modification éfféctuée avec succès!" })
+          }
+        })
+      }
+    })
+  } else {
+    res.json({ "response": false, titre: "Champ(s) vide(s)", message: "Veuillez remplire tous les champs!" })
+  }
+}
 
 
-
-
+/** Fonction de suppression d'un regiment */
+exports.deleteregiments = (req, res) => {
+  let { id } = req.body;
+  if (id) {
+    db.query('DELETE FROM regiments WHERE id = ?', [id], (error, result) => {
+      if (error) {
+        console.log(error);
+      }
+      if (result.affectedRows > 0) {
+        res.json({ "response": true, titre: "Regiment supprimé", message: "Suppression éfféctuée avec succès!" })
+      } else {
+        res.json({ "response": false, titre: "Regiment non supprimé", message: "Désolé ce regiment n'existe pas" })
+      }
+    })
+  } else {
+    res.json({ "response": false, titre: "Champ(s) vide(s)", message: "Veuillez remplire tous les champs!" })
+  }
+}
